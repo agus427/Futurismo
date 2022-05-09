@@ -522,7 +522,7 @@ display: block;
 	display: grid;
 	grid-template: 
 	"header" 100px
-	"section-aga" 500px
+	"section-aga" 550px
 	"section-bga" 500px
 	"footer" 100px
 	;
@@ -530,12 +530,12 @@ display: block;
 
 .section-aga{
 	grid-area: section-aga;
-	background-color: orange;
+	background-color: #e1d3d2;
 }
 
 .section-bga{
 	grid-area: section-bga;
-	background-color: green;
+	background-color: #e1d3d2;
 }
 
 .galeria{
@@ -553,6 +553,19 @@ display: block;
 #gallery{
 	margin-left: 5%;
 	padding-left: 15%;
+}
+
+.galeria{
+	clear: left;
+	margin-left: 5%;
+	padding-top: 2%;
+}
+
+.pg{
+	margin-left: 6%;
+	margin-top: 3%;
+	font-size: 24px;
+	padding-right: 10%;
 }
 
 
