@@ -7,11 +7,16 @@
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 </head>
+
+
+
+
 <body>
 
-	<main class="grid-carlo">
+	<main class="grid-resultados">
 
 		<header class="header">
+
 			<a href="index.html" class="futurismo"><h1>FUTURISMO</h1></a>
 
 			<nav class="botonera">
@@ -52,6 +57,7 @@
 
 
 			</nav>
+
 		</header>
 
 
@@ -59,45 +65,69 @@
 
 
 
-		<section class="section-ca">
-
-			<div><img src="img/i12.png" class="ich"><h2 class="h2um">Carlo Carrà</h2></div>
-			<br>
-
-			<img src="img/i22.png" class="ich2">
-			<p class="ph">Nació el 11 de febrero de 1881 en Quargnento y falleció en 13 de abril de 1966 en Milán. Fue un<strong> pintor</strong> y uno de <strong>los máximos representantes</strong> del futurismo junto con Marinetti.</p>
-			<br>
-
-			<img src="img/i22.png" class="ich2">
-			<p class="ph">Fue pintor de numerosas pinturas como <u>el funeral del anarquista</u> y<u> el jinete rojo</u>, además <u>escribió libros</u> con relación al arte como<strong> Pintura Metafísica.</strong> A sus 12 años se marchó de casa para pintar murales. Luego, ya con 18 se encontraba en Paris<u> decorando</u><strong> los pabellones de la Exposición Universal.</strong> Ahí se empezó a ver que el arte estaba comenzando a <u>revolucionarse.</u></p>
-			<br>
-
-			<img src="img/i22.png" class="ich2">
-			<p class="ph">Por su <u>juventud y rebeldía</u> se <u>interesó y experimento</u> con su arte. En 1910, <strong>firma el Manifiesto de la Pintura Futurista</strong> junto con<u> Boccioni, Russolo y Marinetti.</u></p>
-			<br>
-			
-		</section>
 
 
 
+<section class="section-re">
+
+	<?php
+	include('conexion.php');
+
+	$buscar = $_POST['buscar'];
+	
+
+	$consulta = mysqli_query($conexion, "SELECT * FROM artstas WHERE nombre LIKE '%$buscar%' OR apellido LIKE '%$buscar%' ");
+?>
 
 
-		<aside class="aside-ca">
+    
+	<?php
 
-			<div class="ump1 fadein">
-				<img src="img/carlo.jpg" class="border-radiusHP">
-				<h3 class="border-radiusHT">Carlo Carrà</h3>
-			</div>
+		while($resultados=mysqli_fetch_array($consulta)) {
 
-			<div class="ump2 fadein">
-				<img src="img/carlocarra.jpg" class="border-radiusHP">
-				<h3 class="border-radiusHT">Carlo Carrà de joven</h3>
-			</div>
+	?>
+
+	<div class="fadein">
+    <?php	
+			echo $resultados['nombre'];
+			echo $resultados['apellido'];
+			echo $resultados['bio'];
+	?></div>
+
+</section>
 
 
-		</aside>
 
-		<footer class="footer">
+
+
+
+<section class="section-re2">
+
+    <div class="cajafotos">
+
+    <img src="<?php echo $resultados['foto']?>" class="border-radiusHP fotoizquierda fadein">
+
+    <img src="<?php echo $resultados['foto2']?>" class="border-radiusHP fotoderecha fadein">
+
+    </div>
+
+
+    <?php
+		}
+
+		mysqli_free_result($consulta);
+		mysqli_close($conexion);
+
+	?>
+
+
+
+</section>
+
+
+
+
+<footer class="footer">
 
 			<p class="nombreAH">Desarrollado por Agustin Harris.</p>
 
@@ -107,6 +137,7 @@
 			
 		</footer>
 
-	</main>
+</main>
+
 </body>
 </html>
