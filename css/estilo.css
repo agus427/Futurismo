@@ -15,7 +15,7 @@ main{
 	grid-template:
 	"header header"        100px
 	"section-a section-a"   500px
-	"section-b section-b"   900px
+	"section-b section-b"   1000px
 	"footer footer" 		  100px
 	;
 }
@@ -46,7 +46,7 @@ main{
 }
 
 .botonera{
-	width: 820px;
+	width: 720px;
 	float: right;
 	margin-top: 40px;
 	background-color: #ecc963;
@@ -58,10 +58,10 @@ main{
 }
 
 .botonera li a {
-	font-size: 22px;
+	font-size: 16px;
 	text-decoration: none;
 	color: #000;
-	margin-right: 30px;
+	margin-right: 15px;
 }
 
 .botonera li a:hover {
@@ -71,8 +71,8 @@ main{
 
 .submenu{
 	position: absolute;
-	width: 320px;
-	height: 170px;
+	width: 220px;
+	height: 120px;
 	display: none;
 	background-color: #debc5b;
 	padding-top: 10%;
@@ -696,6 +696,17 @@ display: block;
 .slide-in-blurred-right{animation:slide-in-blurred-right 1s cubic-bezier(.23,1.000,.32,1.000) 1s both}
 @keyframes slide-in-blurred-right{0%{transform:translateX(1000px) scaleX(2.5) scaleY(.2);transform-origin:0 50%;filter:blur(40px);opacity:0}100%{transform:translateX(0) scaleY(1) scaleX(1);transform-origin:50% 50%;filter:blur(0);opacity:1}}
 
+
+
+
+
+
+
+
+
+
+
+
 /*Contacto*//*Contacto*//*Contacto*//*Contacto*//*Contacto*//*Contacto*//*Contacto*//*Contacto*//*Contacto*/
 
 .grid-contacto{
@@ -780,15 +791,15 @@ label222{
 	height: 30px;
 }
 
-
-
-
+.tcyr{
+	background-color: #c9b3b1;
+}
 
 .formulario{
 	width: 400px;
-	height: 550px;
-	background-color: #e1d3d2;
-	margin-left: 5%;
+	height: 600px;
+	background-color: #c9b3b1;
+	margin-left: 25%;
 }
 
 .float{
@@ -798,9 +809,9 @@ label222{
 
 .boton{
 	margin-left: 70px;
-	margin-top: 10%;
 	width: 100px;
 	height: 30px;
+	border-radius: 35px;
 }
 
 .nombre{
@@ -815,12 +826,14 @@ label222{
 	width: 200px;
 	margin-top: 5%;
 	margin-left: 5%;
+	border-radius: 35px;
 }
 
 .recuadro2{
 	width: 300px;
 	margin-top: 5%;
 	margin-left: 85px;
+	border-radius: 35px;
 }
 
 
@@ -888,3 +901,132 @@ main{
 .fotoparaabajo{
 	margin-top: 20%;
 }
+
+
+
+
+
+
+/*registro y login*//*registro y login*//*registro y login*//*registro y login*//*registro y login*//*registro y login*//*registro y login*/
+
+.grid-registroylogin{
+	display: grid;
+	grid-template: 
+	"header header" 100px
+	"section-registroylogin section-registroylogin2" 900px
+	"footer footer" 100px /
+	auto 700px
+	;
+}
+
+.section-registroylogin{
+	grid-area: section-registroylogin;
+	background-color: #e1d3d2;
+}
+
+.section-registroylogin2{
+	grid-area: section-registroylogin2;
+	background-color: #e1d3d2;
+}
+
+.fotouser{
+	background-color: yellow;
+}
+
+.cajaregistro{
+	width: 400px;
+	height: 680px;
+	background-color: #c9b3b1;
+	margin-left: 25%;
+}
+
+.cajaregistro2{
+	width: 400px;
+	height: 350px;
+	background-color: #c9b3b1;
+	margin-left: 25%;
+}
+
+.nombre{
+	margin-left: 10%;
+	margin-top: 3%;
+	font-size: 24px;
+	padding-right: 10%;
+	color: #000000;
+}
+
+.recuadro01{
+	width: 200px;
+	margin-top: 5%;
+	margin-left: 5%;
+}
+
+.registrateic{
+	float: left;
+	margin-left: 120px;
+	margin-top: 2%;
+}
+
+.h2reylo{
+	margin-left: 15%;
+	margin-top: 12%;
+	font-size: 36px;
+}
+
+.efectoreylo{-webkit-animation:slide-in-fwd-center 2s cubic-bezier(.25,.46,.45,.94) both;animation:slide-in-fwd-center 2s cubic-bezier(.25,.46,.45,.94) both}
+
+.h2reylo2{
+	margin-left: 15%;
+	font-size: 36px;
+	margin-top: 5%;
+}
+
+
+
+
+
+
+/*Login*//*Login*//*Login*//*Login*//*Login*//*Login*//*Login*//*Login*//*Login*//*Login*//*Login*//*Login*//*Login*/
+
+.grid-login{
+	display: grid;
+	grid-template: 
+	"header" 100px
+	"section-login" 1000px
+	"footer" 100px
+	;
+}
+
+
+.section-login{
+	grid-area: section-login;
+	background-color: #e1d3d2;
+}
+
+.video{
+	float: left;
+	margin-left: 3%;
+	margin-top: 5%;
+}
+
+.videoG{
+	float: left;
+	margin-left: 28%;
+	margin-top: 5%;
+}
+
+.pepe{
+	margin-left: 5%;
+}
+
+.h2lo{
+	margin-top: 5%;
+	margin-left: 12%;
+	font-size: 36px;
+}
+
+.slide-in-blurred-right2{animation:slide-in-blurred-right 1s cubic-bezier(.23,1.000,.32,1.000) 4s both}
+@keyframes slide-in-blurred-right2{0%{transform:translateX(1000px) scaleX(2.5) scaleY(.2);transform-origin:0 50%;filter:blur(40px);opacity:0}100%{transform:translateX(0) scaleY(1) scaleX(1);transform-origin:50% 50%;filter:blur(0);opacity:1}}
+
+.slide-in-blurred-left2{animation:slide-in-blurred-left 1s cubic-bezier(.23,1.000,.32,1.000) 3s both}
+@keyframes slide-in-blurred-left{0%{transform:translateX(-1000px) scaleX(2.5) scaleY(.2);transform-origin:100% 50%;filter:blur(40px);opacity:0}100%{transform:translateX(0) scaleY(1) scaleX(1);transform-origin:50% 50%;filter:blur(0);opacity:1}}

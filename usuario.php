@@ -9,7 +9,7 @@
 </head>
 <body>
 
-	<main class="grid-contacto">
+	<main class="grid-registroylogin">
 
 		<header class="header">
 
@@ -59,43 +59,43 @@
 		</header>
 
 
-		<section class="section-co">
+
+		<section class="section-registroylogin">
 
 
-			<div><img src="img/i12.png" class="ich"><h2 class="h2co">Contacto</h2></div>
+			<div class="efectoreylo"><img src="img/i12.png" class="ich"><h2 class="h2reylo">Registrate</h2></div>
 			<br>
 
 
 
 
-		<div class="formulario">
+		<div class="cajaregistro efectoreylo">
 
- 		<form action="mailto:mail@gmail.com" method="post">
+ 		<form action="registro.php" method="post">
 
         <div class="float"><img src="img/i22.png" class="ich2">
         <label class="nombre">Nombre</label>
-        <input class="recuadro1 cajadeescribir" type="text" name="nombres" id="nombres" autofocus required></div>
+        <input class="recuadro01 cajadeescribir" type="text" name="nombre" autofocus required></div>
 
         <div class="float"><img src="img/i22.png" class="ich2">
         <label class="nombre">Apellido</label>
-        <input class="recuadro1 cajadeescribir" type="text" name="apellidos" id="apellidos" autofocus required></div>
+        <input class="recuadro01 cajadeescribir" type="text" name="apellido" autofocus required></div>
 
         <div class="float"><img src="img/i22.png" class="ich2">
         <label class="nombre">Mail</label>
-        <input class="recuadro2 cajadeescribir" type="email" name="email" id="email" autofocus required></div>
+        <input class="recuadro01 cajadeescribir" type="email" name="email" autofocus required></div>
 
         <div class="float"><img src="img/i22.png" class="ich2">
-        <label class="nombre">Mensaje</label>
-         <textarea class="recuadro2 cajadeescribir" name="msj" id="mensaje" required ></textarea>
-        	
-        </div>
+        <label class="nombre">Usuario</label>
+        <input class="recuadro01 cajadeescribir" type="text" name="usuario" autofocus required></div>
 
-        <div class="float"><input class="boton btn" type="submit" name="sumit" name="Enviar Mensaje"></div>
+        <div class="float"><img src="img/i22.png" class="ich2">
+        <label class="nombre">Contraseña</label>
+        <input class="recuadro01 cajadeescribir" type="password" name="password" autofocus required></div>
 
-  	</form>
+        <div class="float"><input class="boton btn" type="submit" name="sumit" value="Registrate"></div>
 
-
- 		
+  	</form> 		
  	</div>
 			
 		</section>
@@ -104,18 +104,37 @@
 
 
 
-		<aside class="aside-co">
+		<section class="section-registroylogin2">
 
-			<div class="cop1 fadein">
-				<img src="img/futuristasreunidos2.jpg" class="border-radiusHP">
-				<h3 class="border-radiusHT">Futuristas reunidos</h3>
+			<div class="efectoreylo"><img src="img/i12.png" class="ich"><h2 class="h2reylo">Inicia sesion</h2></div>
+			<br>
 
-				<img src="img/s32.jpg" class="border-radiusHP">
-				<h3 class="border-radiusHT">Obra de Giacomo Balla</h3>
-			</div>
 
+
+
+		<div class="cajaregistro2 efectoreylo">
+
+ 		<form action="login.php" method="post">
+
+        <div class="float"><img src="img/i22.png" class="ich2">
+        <label class="nombre">Usuario</label>
+        <input class="recuadro01 cajadeescribir" type="text" name="usuario" autofocus required></div>
+
+        <div class="float"><img src="img/i22.png" class="ich2">
+        <label class="nombre">Contraseña</label>
+        <input class="recuadro01 cajadeescribir" type="password" name="password" autofocus required></div>
+
+        <div class="float"><input class="boton btn" type="submit" name="sumit" value="Inicia Sesion"></div>
+
+  	</form> 		
+ 	</div>
 			
-		</aside>
+		</section>
+
+
+
+
+
 
 
 

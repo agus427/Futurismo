@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Futurismo</title>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+</head>
+<body>
+
+	<main class="grid-artista">
+
+		<header class="header">
+
+			<a href="index.html" class="futurismo"><h1>FUTURISMO</h1></a>
+
+			<nav class="botonera">
+
+			<ul>
+				
+				<li><a href="historia.html">Historia</a></li>
+				<li><a href="filosofia.html">Filosofia</a></li>
+				<li><a href="artistas.html">Artistas</a>
+
+					<ul class="submenu">
+						<li><a href="giacomo.php">Giacomo Balla</a></li>
+						<li><a href="umberto.php">Umberto Boccioni</a></li>
+						<li><a href="carlo.php">Carlo Carrá</a></li>
+					</ul>
+
+				</li>
+				<li><a href="galeria.html">Galeria</a></li>
+				<li><a href="contacto.html">Contacto</a></li>
+
+			</ul>
+			</nav>
+
+		</header>
+
+
+		<section class="section-ar">
+
+			<form id="form1" name="form1" method="GET" action="artistas.php">
+      <label>¿Qué artista está buscando?
+        <select name="zodiaco" id="zodiaco">
+        <option>Artista...</option>
+        <option>Giacomo Balla</option>
+        <option>Umberto Boccioni</option>
+        <option>Carlo Carrá</option>
+      </select>
+        <br />
+        <br />
+      <input type="submit" name="mostrar" id="mostrar" value="Buscar" />
+      </label>
+    </form>
+
+		</section>
+
+
+		<footer class="footer">
+
+			<p class="nombre">Desarrollado por Agustin Harris.</p>
+
+			<div>
+			<a href="https://www.palermo.edu/" target="_blank"><img src="img/logoup.png" class="logoup"></a>
+			</div>
+			
+		</footer>
+
+	</main>
+</body>
+</html>
