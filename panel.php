@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +10,7 @@
 </head>
 <body>
 
-	<main class="grid-contacto">
+	<main class="grid-login">
 
 		<header class="header">
 
@@ -58,71 +59,40 @@
 
 		</header>
 
+		<section class="section-login">
 
-		<section class="section-co">
+<?php
 
-
-			<div><img src="img/i12.png" class="ich"><h2 class="h2co">Contacto</h2></div>
-			<br>
-
+if(isset($_SESSION['nombre']) and isset($_SESSION['apellido']) ){
 
 
+	echo "
+	<div class='video slide-in-blurred-left2'><iframe width='400' height='315' src='https://www.youtube.com/embed/xyct5oUH3DM' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; controls;' allowfullscreen></iframe></div>
 
-		<div class="formulario">
+			<div class='video slide-in-blurred-left2'><iframe width='400' height='315' src='https://www.youtube.com/embed/sAc4DPJLMLQ' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; controls;' allowfullscreen></iframe></div>
 
- 		<form action="mailto:mail@gmail.com" method="post">
+			<div class='video slide-in-blurred-left2'><iframe width='400' height='315' src='https://www.youtube.com/embed/1P96T9n3YDk' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></div>
 
-        <div class="float"><img src="img/i22.png" class="ich2">
-        <label class="nombre">Nombre</label>
-        <input class="recuadro1 cajadeescribir" type="text" name="nombres" id="nombres" autofocus required></div>
+			<div class='videoG slide-in-blurred-right2'><iframe width='560' height='315' src='https://www.youtube.com/embed/YXiZjvSsqF0' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></div>
 
-        <div class="float"><img src="img/i22.png" class="ich2">
-        <label class="nombre">Apellido</label>
-        <input class="recuadro1 cajadeescribir" type="text" name="apellidos" id="apellidos" autofocus required></div>
+			<div class='salir'><a href='salir.php'>Cerrar sesion</a></div>
 
-        <div class="float"><img src="img/i22.png" class="ich2">
-        <label class="nombre">Mail</label>
-        <input class="recuadro2 cajadeescribir" type="mail" name="email" id="email" autofocus required></div>
+	"
+	;}
+	else{
+	echo "<br><h2 class='pepe'>Este contenido es solo para usuarios registrados...</h2>
+	<br>
+	<h2 class='pepe'>Por favor registrate para poder acceder.</h2>";
+	include("form_registro2.php");
+}
+?>
 
-        <div class="float"><img src="img/i22.png" class="ich2">
-        <label class="nombre">Mensaje</label>
-         <textarea class="recuadro2 cajadeescribir" name="msj" id="mensaje" required ></textarea>
-        	
-        </div>
-
-        <div class="float"><input class="boton btn" type="submit" name="sumit" name="Enviar Mensaje"></div>
-
-  	</form>
-
-
- 		
- 	</div>
-			
-		</section>
+</section>
 
 
 
 
-
-		<aside class="aside-co">
-
-			<div class="cop1 fadein">
-				<img src="img/futuristasreunidos2.jpg" class="border-radiusHP">
-				<h3 class="border-radiusHT">Futuristas reunidos</h3>
-
-				<img src="img/s32.jpg" class="border-radiusHP">
-				<h3 class="border-radiusHT">Obra de Giacomo Balla</h3>
-			</div>
-
-			
-		</aside>
-
-
-
-
-
-
-		<footer class="footer">
+	<footer class="footer">
 
 			<p class="nombreAH">Desarrollado por Agustin Harris.</p>
 
@@ -132,6 +102,5 @@
 			
 		</footer>
 
-	</main>
 </body>
 </html>

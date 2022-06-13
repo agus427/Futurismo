@@ -1,16 +1,5 @@
-<?php session_start();
-
-
-?>
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Login de Usuarios</title>
-</head>
-
-<body>
-	<!DOCTYPE html>
+<?php session_start();?>
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -77,8 +66,9 @@
 		<section class="section-login">
 
 <?php
-$usuario = $_POST['usuario'];
-$password = $_POST['password'];
+
+$usuario=$_POST['usuario'];
+$password=md5($_POST['password']);
 
 include("conexion.php");
 
@@ -94,15 +84,13 @@ if($resultado!=0){
 
 	echo "<div><img src='img/i12.png' class='ich slide-in-blurred-right'><h2 class='h2lo slide-in-blurred-right'>¡Bienvenido ".$_SESSION['nombre']." ".$_SESSION['apellido']." al Futurismo!</h2></div>
 
-	<img src='img/i22.png' class='ich2 slide-in-blurred-right'><p class='ph slide-in-blurred-right'>Aqui te mostramos videos para conocer más a fondo esta vanguardia artistica.</p>
+	<img src='img/i22.png' class='ich2 slide-in-blurred-right'><p class='ph slide-in-blurred-right'> Aqui podras conocer más a fondo esta vanguardia artistica.</p>
 
-			<div class='video slide-in-blurred-left2'><iframe width='400' height='315' src='https://www.youtube.com/embed/xyct5oUH3DM' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; controls;' allowfullscreen></iframe></div>
+	<img src='img/i22.png' class='ich2 slide-in-blurred-right'><p class='ph slide-in-blurred-right'>Haciendo <a href='panel.php'>click aquí</a> podras ver más videos sobre la vanguardia.</p>
 
-			<div class='video slide-in-blurred-left2'><iframe width='400' height='315' src='https://www.youtube.com/embed/sAc4DPJLMLQ' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; controls;' allowfullscreen></iframe></div>
+	<div class='videoG slide-in-blurred-right2'><iframe width='560' height='315' src='https://www.youtube.com/embed/uERP0GiVcfY' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></div>
 
-			<div class='video slide-in-blurred-left2'><iframe width='400' height='315' src='https://www.youtube.com/embed/1P96T9n3YDk' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></div>
-
-			<div class='videoG slide-in-blurred-right2'><iframe width='560' height='315' src='https://www.youtube.com/embed/YXiZjvSsqF0' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></div>
+	<div class='salir'><a href='salir.php'>Cerrar sesion</a></div>
 
 	"
 
@@ -111,7 +99,7 @@ if($resultado!=0){
 }
 
 else{
-	echo "<h2 class='pepe'>Lo sentimos ese no es un usuario registrado o hubo un error en la escritura. :( </h2>";
+	echo "<br><h2 class='pepe'>Lo sentimos ese no es un usuario registrado o hubo un error en la escritura. :( </h2><br>";
 	echo "<h2 class='pepe'>Por favor registrate para poder acceder</h2>";
 	include ("form_registro2.php");
 }

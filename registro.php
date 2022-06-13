@@ -12,7 +12,7 @@
 	$apellido = $_POST['apellido'];
 	$email = $_POST['email'];
 	$usuario = $_POST['usuario'];
-	$password = ($_POST['password']);
+	$password = md5($_POST['password']);
 
 
 	include("conexion.php");
